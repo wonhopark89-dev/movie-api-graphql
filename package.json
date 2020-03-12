@@ -1,0 +1,12 @@
+{
+  "name": "movieql",
+  "version": "1.0.0",
+  "description": "Movie Api with GraphQL",
+  "main": "index.js",
+  "repository": "https://github.com/wonhopark89-dev/movieql.git",
+  "author": "wonhopark89<wonhopark89.dev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
+}
