@@ -1,4 +1,4 @@
-import { people, getById } from "./db";
+import { getMovies, getById, addMovie } from "./db";
 
 const resolvers = {
   Query: {
@@ -7,8 +7,12 @@ const resolvers = {
     // }
     //person: () => winn // this is short cut style
 
-    people: () => people,
-    person: (_, {id}) => getById(id)
+    movies: () => getMovies(),
+    movie: (_, {id}) => getById(id)
+  },
+
+  Mutation : {
+    addMovie : (_, { name, score}) => addMovie(name,score)
   }
 };
 
