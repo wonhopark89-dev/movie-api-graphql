@@ -1,4 +1,4 @@
-import { getMovies } from "./db2";
+import { getMovies, getMovie, getSuggestion } from "./db2";
 
 const resolvers = {
   Query: {
@@ -7,7 +7,9 @@ const resolvers = {
     // }
     //person: () => winn // this is short cut style
 
-    movies: (_, {limit, rating}) => getMovies(limit, rating)
+    movies: (_, { limit, rating }) => getMovies(limit, rating),
+    movie: (_, { id }) => getMovie(id),
+    suggestions: (_, { id }) => getSuggestion(id)
   }
 };
 
