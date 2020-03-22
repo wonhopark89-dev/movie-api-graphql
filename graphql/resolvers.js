@@ -1,15 +1,14 @@
-const winn = {
-  name: "winn",
-  age: 32,
-  gender: "male"
-};
+import { people, getById } from "./db";
 
 const resolvers = {
   Query: {
     // person : function() {
     //   return() => winn;
     // }
-    person: () => winn // this is short cut style
+    //person: () => winn // this is short cut style
+
+    people: () => people,
+    person: (_, {id}) => getById(id)
   }
 };
 

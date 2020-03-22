@@ -1,9 +1,11 @@
 type Query {
-  person: Winn!
+  people : [Person]!
+  person(id: Int!): Person
 }
 
-type Winn {
-  name: String!
-  age: Int!
-  gender: String!
+type Person {
+  id : Int!
+  name : String!
+  age : Int!
+  gender : String!
 }
